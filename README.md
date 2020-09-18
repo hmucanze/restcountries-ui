@@ -1,27 +1,18 @@
-# RestcountriesUi
+# restcountries-ui
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+A presente aplicação foi desenvolvida em resposta ao desafio proposto pela 2ibi que visa o desenvolvimento
+de uma aplicação cliente para a visualização dos recursos(paises) providos por uma API
 
-## Development server
+# Funcionalidades
+1. Listagem de informações dos paises
+1. Exportar a lista de paises em xsl, csv e xml
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Nota: a paginação apresentada na aplicação foi implementada no front-end apenas, o que não está muito correcto na prática,
+pois o ideal é que a paginação seja feita no back-end e a API não dispõe dessa funcionalidade, portanto, para facilitar a
+visualzação das informações, achou-se necessário apresentar de forma segmentada.  
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Tecnologias Usadas
+1. Angular v10 => um framework JS baseado em componentes, que nos permite o desenvolvimento de aplicações web
+2. PrimeNg v10.0.0 => uma biblioteca de componentes para Angular, desenvolvida pela primetek
+3. Export From Json => é uma biblioteca JS que nos permite a exportar dados no formato json para diferentes tipos
+de arquivos, como xsl, xml e csv  
