@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Country } from './country';
 
-import { ExcelService } from './../excel.service';
+import { Country } from './country';
 import { CountryService } from './../country.service';
+import { ExportFromJsonService } from './../export-from-json.service';
 
 @Component({
   selector: 'app-country',
@@ -13,9 +13,12 @@ export class CountryComponent implements OnInit {
 
   countries: Array<Country>;
 
+  display: boolean = false;
+  country: Country;
+
   constructor(
     private countryService: CountryService,
-    private excelService: ExcelService
+    private exportFromJSONService: ExportFromJsonService
     ) { }
 
   ngOnInit(): void {
@@ -23,14 +26,19 @@ export class CountryComponent implements OnInit {
   }
 
   pesquisar() {
-    this.countryService.pesquisar()
+    this.countryService.listar()
     .then(countries => {
       this.countries = countries;
     })
   }
 
-  exportAsXLSX():void {
-    this.excelService.exportAsExcelFile(this.countries, 'countries');
+ export(data: Array<Country>, fileName, exportType) {
+  this.exportFromJSONService.export(data,fileName,exportType);
+ }
+
+ showDialog(country: Country) {
+   this.display = true;
+   this.country = country;
  }
 
 }

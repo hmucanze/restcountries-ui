@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 
 import { CountryService } from './country.service';
 import { CountryComponent } from './country/country.component';
-import { ExcelService } from './excel.service';
 
 @NgModule({
   declarations: [ CountryComponent ],
@@ -19,6 +19,7 @@ import { ExcelService } from './excel.service';
     BrowserAnimationsModule,
 
     ButtonModule,
+    DialogModule,
     InputTextModule,
     TableModule
   ],
@@ -27,7 +28,6 @@ import { ExcelService } from './excel.service';
   ],
   providers: [ 
     CountryService,
-    ExcelService
    ]
 })
 export class CountryModule { }
