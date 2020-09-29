@@ -1,20 +1,22 @@
-<div class="container">
+<div class="container" style="margin-bottom: 50px;">
     <div class="p-grid" style="margin-top: 5px;">
         <div class="p-col-6">
             <h1>Listagem de Paises</h1>
         </div>
+    </div>
 
-        <div class="p-col-2">
+    <div class="p-grid p-offset-6">
+        <div class="p-col">
             <button pButton (click)="export(countries,'countries','xls')"
             label="Exportar para excel" class="p-button-success"></button>
         </div>
 
-        <div class="p-col-2">
+        <div class="p-col">
             <button pButton  (click)="export(countries,'countries','csv')"
             label="Exportar para CSV" class="p-button-secondary"></button>
         </div>
 
-        <div class="p-col-2">
+        <div class="p-col">
             <button pButton (click)="export(countries,'countries','xml')"
             label="Exportar para XML" class="p-button-warning"></button>
         </div>
@@ -22,7 +24,7 @@
 
     <div class="p-grid">
         <div class="p-col-12">
-            <p-table [value]="countries" [paginator]="true" [rows]="6">
+            <p-table [value]="countries" [responsive]=true [paginator]="true" [rows]="8">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Nome</th>
@@ -52,6 +54,12 @@
                         <td>
                             <button type="button" pButton (click)="showDialog(country)" label="bandeira"></button>
                         </td>
+                    </tr>
+                </ng-template>
+
+                <ng-template pTemplate="emptymessage"> 
+                    <tr>
+                        <td colspan="9">Nenhum Registro encontrado!</td>
                     </tr>
                 </ng-template>
             </p-table>
