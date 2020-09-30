@@ -14,5 +14,5 @@ visualzação das informações, achou-se necessário apresentar de forma segmen
 # Tecnologias Usadas
 1. Angular v10 => um framework JS baseado em componentes, que nos permite o desenvolvimento de aplicações web
 2. PrimeNg v10.0.0 => uma biblioteca de componentes para Angular, desenvolvida pela primetek
-3. Export From Json => é uma biblioteca JS que nos permite a exportar dados no formato json para diferentes tipos
+3. Export From Json => é uma biblioteca JS que nos permite a exportação dados no formato json para diferentes tipos
 de arquivos, como xsl, xml e csv  
